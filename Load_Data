@@ -1,4 +1,4 @@
-#this code loads the data into R
+#this code loads data into R
 
 data<-read.csv('household_power_consumption.txt', sep=';', na.strings='?')
 sub=subset(data, data['Date']==c('1/2/2007','2/2/2007' ))
