@@ -1,0 +1,5 @@
+data<-read.csv('household_power_consumption.txt', sep=';', na.strings='?')
+sub=subset(data, data['Date']==c('1/2/2007','2/2/2007' ))
+newdate<-paste(sub['Date'][,], sub['Time'][,])
+DateTime<-strptime(newdate, '%d/%m/%Y %H:%M:%S')
+sub['DateTime']<-data.frame(DateTime)
